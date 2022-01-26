@@ -37,7 +37,7 @@ class OrderItem(BaseModel):
     quantity = models.PositiveIntegerField(default=1, verbose_name='Quantity')
 
     def __str__(self):
-        return f"{self.quantity} * {self.item.name}"
+        return f"{self.quantity} x {self.item.name}"
 
     @property
     def get_cost(self):
